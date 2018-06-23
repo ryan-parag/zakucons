@@ -1,0 +1,131 @@
+extends layouts/_base
+
+- var zakucons = [
+- {name:"activity", src:"zakucon-activity.svg",class:"zcon-activity"},
+- {name:"anaheim electronics", src:"zakucon-ae.svg",class:"zcon-ae"},
+- {name:"A.E.U.G.", src:"zakucon-aeug.svg",class:"zcon-aeug"},
+- {name:"amuro", src:"zakucon-amuro.svg",class:"zcon-amuro"},
+- {name:"arrow-down", src:"zakucon-arrow-down.svg",class:"zcon-arrow-down"},
+- {name:"arrow-up", src:"zakucon-arrow-up.svg",class:"zcon-arrow-up"},
+- {name:"arrow-left", src:"zakucon-arrow-left.svg",class:"zcon-arrow-left"},
+- {name:"arrow-right", src:"zakucon-arrow-right.svg",class:"zcon-arrow-right"},
+- {name:"arrow-fill-down", src:"zakucon-arrow-fill-down.svg",class:"zcon-arrow-fill-down"},
+- {name:"arrow-fill-up", src:"zakucon-arrow-fill-up.svg",class:"zcon-arrow-fill-up"},
+- {name:"arrow-fill-left", src:"zakucon-arrow-fill-left.svg",class:"zcon-arrow-fill-left"},
+- {name:"arrow-fill-right", src:"zakucon-arrow-fill-right.svg",class:"zcon-arrow-fill-right"},
+- {name:"award", src:"zakucon-award.svg",class:"zcon-award"},
+- {name:"bar-chart", src:"zakucon-bar-chart.svg",class:"zcon-bar-chart"},
+- {name:"bolt", src:"zakucon-bolt.svg",class:"zcon-bolt"},
+- {name:"char", src:"zakucon-char.svg",class:"zcon-char"},
+- {name:"check", src:"zakucon-check.svg",class:"zcon-check"},
+- {name:"chevron-down", src:"zakucon-chevron-down.svg",class:"zcon-chevron-down"},
+- {name:"chevron-up", src:"zakucon-chevron-up.svg",class:"zcon-chevron-up"},
+- {name:"chevron-left", src:"zakucon-chevron-left.svg",class:"zcon-chevron-left"},
+- {name:"chevron-right", src:"zakucon-chevron-right.svg",class:"zcon-chevron-right"},
+- {name:"clock", src:"zakucon-clock.svg",class:"zcon-clock"},
+- {name:"close", src:"zakucon-close.svg",class:"zcon-close"},
+- {name:"cog", src:"zakucon-cog.svg",class:"zcon-cog"},
+- {name:"amuro", src:"zakucon-amuro.svg",class:"zcon-amuro"},
+- {name:"crosshair", src:"zakucon-crosshair.svg",class:"zcon-crosshair"},
+- {name:"crosshair2", src:"zakucon-crosshair2.svg",class:"zcon-crosshair2"},
+- {name:"efsf-capt", src:"zakucon-efsf-capt.svg",class:"zcon-efsf-capt"},
+- {name:"efsf-cmdr", src:"zakucon-efsf-cmdr.svg",class:"zcon-efsf-cmdr"},
+- {name:"efsf-cpo", src:"zakucon-efsf-cpo.svg",class:"zcon-efsf-cpo"},
+- {name:"efsf-ens", src:"zakucon-efsf-ens.svg",class:"zcon-efsf-ens"},
+- {name:"efsf-lcdr", src:"zakucon-efsf-lcdr.svg",class:"zcon-efsf-lcdr"},
+- {name:"efsf-lt", src:"zakucon-efsf-lt.svg",class:"zcon-efsf-lt"},
+- {name:"efsf-ltjg", src:"zakucon-efsf-ltjg.svg",class:"zcon-efsf-ltjg"},
+- {name:"efsf-po", src:"zakucon-efsf-po.svg",class:"zcon-efsf-po"},
+- {name:"efsf", src:"zakucon-efsf.svg",class:"zcon-efsf"},
+- {name:"exclamation", src:"zakucon-exclamation.svg",class:"zcon-exclamation"},
+- {name:"check", src:"zakucon-check.svg",class:"zcon-check"},
+- {name:"flag", src:"zakucon-flag.svg",class:"zcon-flag"},
+- {name:"frame-fill", src:"zakucon-frame-fill.svg",class:"zcon-frame-fill"},
+- {name:"frame", src:"zakucon-frame.svg",class:"zcon-frame"},
+- {name:"globe", src:"zakucon-globe.svg",class:"zcon-globe"},
+- {name:"gundam", src:"zakucon-gundam.svg",class:"zcon-gundam"},
+- {name:"hatch-fill", src:"zakucon-hatch-fill.svg",class:"zcon-hatch-fill"},
+- {name:"hatch-outline", src:"zakucon-hatch-outline.svg",class:"zcon-hatch-outline"},
+- {name:"flag", src:"zakucon-flag.svg",class:"zcon-flag"},
+- {name:"info", src:"zakucon-info.svg",class:"zcon-info"},
+- {name:"layers", src:"zakucon-layers.svg",class:"zcon-layers"},
+- {name:"link", src:"zakucon-link.svg",class:"zcon-link"},
+- {name:"londo-bell", src:"zakucon-londo-bell.svg",class:"zcon-londo-bell"},
+- {name:"navigation", src:"zakucon-navigation.svg",class:"zcon-navigation"},
+- {name:"notification", src:"zakucon-notification.svg",class:"zcon-notification"},
+- {name:"oz", src:"zakucon-oz.svg",class:"zcon-oz"},
+- {name:"pin", src:"zakucon-pin.svg",class:"zcon-pin"},
+- {name:"preventer-wind", src:"zakucon-preventer-wind.svg",class:"zcon-preventer-wind"},
+- {name:"question", src:"zakucon-question.svg",class:"zcon-question"},
+- {name:"rank-a", src:"zakucon-rank-a.svg",class:"zcon-rank-a"},
+- {name:"rank-b", src:"zakucon-rank-b.svg",class:"zcon-rank-b"},
+- {name:"rank-c", src:"zakucon-rank-c.svg",class:"zcon-rank-c"},
+- {name:"rank-d", src:"zakucon-rank-d.svg",class:"zcon-rank-d"},
+- {name:"rank-s", src:"zakucon-rank-s.svg",class:"zcon-rank-s"},
+- {name:"search", src:"zakucon-search.svg",class:"zcon-search"},
+- {name:"shield", src:"zakucon-shield.svg",class:"zcon-shield"},
+- {name:"signal", src:"zakucon-signal.svg",class:"zcon-signal"},
+- {name:"star-fill", src:"zakucon-star-fill.svg",class:"zcon-star-fill"},
+- {name:"star-outline", src:"zakucon-star-outline.svg",class:"zcon-star-outline"},
+- {name:"target", src:"zakucon-target.svg",class:"zcon-target"},
+- {name:"user-add", src:"zakucon-user-add.svg",class:"zcon-user-add"},
+- {name:"user-admin", src:"zakucon-user-admin.svg",class:"zcon-user-admin"},
+- {name:"user-delete", src:"zakucon-user-delete.svg",class:"zcon-user-delete"},
+- {name:"user", src:"zakucon-user.svg",class:"zcon-user"},
+- {name:"users", src:"zakucon-users.svg",class:"zcon-users"},
+- {name:"warning", src:"zakucon-warning.svg",class:"zcon-warning"},
+- {name:"x", src:"zakucon-x.svg",class:"zcon-x"},
+- {name:"zeta", src:"zakucon-z.svg",class:"zcon-zeta"},
+- {name:"zeon-capt", src:"zakucon-zeon-capt.svg",class:"zcon-zeon-capt"},
+- {name:"zeon-cmdr", src:"zakucon-zeon-cmdr.svg",class:"zcon-zeon-cmdr"},
+- {name:"zeon-cpo", src:"zakucon-zeon-cpo.svg",class:"zcon-zeon-cpo"},
+- {name:"zeon-ens", src:"zakucon-zeon-ens.svg",class:"zcon-zeon-ens"},
+- {name:"zeon-lcdr", src:"zakucon-zeon-lcdr.svg",class:"zcon-zeon-lcdr"},
+- {name:"zeon-lt", src:"zakucon-zeon-lt.svg",class:"zcon-zeon-lt"},
+- {name:"zeon-ltjg", src:"zakucon-zeon-ltjg.svg",class:"zcon-zeon-ltjg"},
+- {name:"zeon-po1", src:"zakucon-zeon-po1.svg",class:"zcon-zeon-po1"},
+- {name:"zeon-po2", src:"zakucon-zeon-po2.svg",class:"zcon-zeon-po2"}
+-	]
+*/
+
+- var path = "http://grapalab.com/zakucons-assets/";
+
+mixin zakugrid(icon)
+	li.zakugrid
+		a.zakugrid__container(href= path + icon.src download)
+			img.zakugrid__icon.zakucon(src= path + icon.src)
+			span.zakugrid__title= icon.name
+
+block content
+
+	.nav
+		.container
+			.row
+				.nav__content
+					a.nav__logo(href="#")
+						img(src="http://grapalab.com/1sc.svg")
+					ul.nav__links
+						li.nav__item
+							a(href="#") Icons
+						li.nav__item
+							a(href="#") GitHub
+						li.nav__item
+							span.badge.badge--default v2.0.1
+	.hero
+		.hero__overlay
+			.container
+				.row
+					.hero__content
+						.hero__title
+							h3.hero__subtitle Icons inspired by the world of
+							h1 Mobile Suit Gundam
+						.hero__download
+							a.btn.btn--outline.btn--lg(href="#") Download
+	.container
+		.row
+			ul#zakuconsList
+				each icon in zakucons
+					+zakugrid(icon)
+		.row
+			.footer
+				a(href="#") Made by Ryan Parag :: GrapaLab

@@ -1,0 +1,17 @@
+include _icon-data
+- var path = "images/icons/";
+
+mixin zakugrid(icon)
+	li.zakugrid
+		a.zakugrid__container(href= path + icon.src download)
+			img.zakugrid__icon.zakucon(src= path + icon.src)
+			span.zakugrid__title= icon.name
+			
+.container
+	ul#zakuconsList
+		each icon in zakucons
+			+zakugrid(icon)
+		span.search__empty Sorry, no result found for&nbsp;
+			strong '
+				span#searchInput
+				| '

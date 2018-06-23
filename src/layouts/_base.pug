@@ -1,0 +1,57 @@
+block variables
+
+doctype html
+html
+  head
+    title Ryan Parag | Product Designer
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    link(rel="stylesheet" href="css/main.min.css")
+    link(rel="apple-touch-icon", sizes="180x180", href="images/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="images/favicons//favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="images/favicons//favicon-16x16.png")
+    link(rel="manifest", href="images/favicons//site.webmanifest")
+    link(rel="mask-icon", href="images/favicons//safari-pinned-tab.svg", color="#c62942")
+    meta(name="msapplication-TileColor", content="#c62942")
+    meta(name="theme-color", content="#ffffff")
+    block head_end
+
+  body
+    block content
+
+    block body_end
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script.
+      var close = document.querySelector(".alert__close");
+      var alert = document.querySelector(".alert");
+      close.addEventListener("click",  closeAlert);
+
+      function closeAlert() {
+        alert.classList.add('is-closed');
+      };
+
+      function filter() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("zakuconsList");
+        li = ul.getElementsByTagName('li');
+
+        var value = document.getElementById("search").value;
+        document.getElementById("searchInput").textContent=value;
+
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+        if($('li.zakugrid:visible').length < 1) {
+          $('.search__empty').show();
+        }
+        else {
+          $('.search__empty').hide();
+        }
+      }
