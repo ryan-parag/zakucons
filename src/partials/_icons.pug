@@ -8,7 +8,7 @@ mixin zakugrid(icon)
 			span.zakugrid__title= icon.name
 			
 .container
-	ul#zakuconsList
+	ul#zakuconsList(data-aos="fade-up")
 		each icon in zakucons
 			+zakugrid(icon)
 		span.search__empty Sorry, no result found for&nbsp;

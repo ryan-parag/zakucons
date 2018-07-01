@@ -7,6 +7,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
     link(rel="stylesheet" href="css/main.min.css")
+    link(rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css")
     link(rel="apple-touch-icon", sizes="180x180", href="images/favicons/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="images/favicons//favicon-32x32.png")
     link(rel="icon", type="image/png", sizes="16x16", href="images/favicons//favicon-16x16.png")
@@ -21,7 +22,15 @@ html
 
     block body_end
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
     script.
+      AOS.init();
+      
+      function searchFilter(x) {
+        $('#search').val(x);
+        filter(x);
+      }
+      
       var close = document.querySelector(".alert__close");
       var alert = document.querySelector(".alert");
       close.addEventListener("click",  closeAlert);

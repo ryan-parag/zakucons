@@ -3,3 +3,10 @@
     .search__container
       img.search__icon(src="images/icons/zakucon-search.svg")
       input.search#search(type="text" placeholder="Search for an icon..." onkeyup="filter()")
+.quick-search
+  .container
+    .row
+      span Quick Search: 
+      span.tag(onclick="searchFilter('zeon')") Zeon
+      span.tag(onclick="searchFilter('efsf')") Earth Federation
+      span.tag.tag--default(onclick="searchFilter('')") Clear

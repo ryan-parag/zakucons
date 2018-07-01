@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons//favicon-16x16.png">
@@ -21,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="nav">
+    <div class="nav" data-aos="fade-down">
       <div class="container">
         <div class="row">
           <div class="nav__content">
@@ -62,13 +63,21 @@
         <div class="container">
           <div class="row">
             <div class="hero__content">
-              <div class="hero__title">
+              <div class="hero__title" data-aos="fade-up">
                 <h3 class="hero__subtitle">Icons inspired by the world of</h3>
                 <h1>Mobile Suit Gundam</h1>
               </div>
-              <div class="hero__download"><a class="btn btn--outline btn--lg" download href="images/icons/zakucons.zip">Download</a></div>
+              <div class="hero__download" data-aos="fade-up"><a class="btn btn--outline btn--lg" download href="images/icons/zakucons.zip">Download</a><a class="btn btn--black btn--lg" href="#search">See the icons</a></div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="intro" data-aos="fade-up">
+          <h4>About</h4>
+          <p>For those not familiar, <a href="https://en.wikipedia.org/wiki/Gundam" target="_blank">Gundam</a>&nbsp;is a science fiction media franchise focused on giant robots, space exploration, intricate realism, and a militaristic setting. Taking place years after a portion of mankind makes the move into space after depleting Earth's resources and space, factions begin a war trying for dominance to either control all of mankind under a single goverment, or separate themselves from it's control. As the grim picture of war becomes clearer, one may find it difficult to see which side is truly good or bad.</p>
         </div>
       </div>
     </div>
@@ -79,8 +88,13 @@
         </div>
       </div>
     </div>
+    <div class="quick-search">
+      <div class="container">
+        <div class="row"><span>Quick Search: </span><span class="tag" onclick="searchFilter('zeon')">Zeon</span><span class="tag" onclick="searchFilter('efsf')">Earth Federation</span><span class="tag tag--default" onclick="searchFilter('')">Clear</span></div>
+      </div>
+    </div>
     <div class="container">
-      <ul id="zakuconsList">
+      <ul id="zakuconsList" data-aos="fade-up">
             <li class="zakugrid"><a class="zakugrid__container" href="images/icons/zakucon-activity.svg" download><img class="zakugrid__icon zakucon" src="images/icons/zakucon-activity.svg"><span class="zakugrid__title">activity</span></a></li>
             <li class="zakugrid"><a class="zakugrid__container" href="images/icons/zakucon-ae.svg" download><img class="zakugrid__icon zakucon" src="images/icons/zakucon-ae.svg"><span class="zakugrid__title">anaheim electronics</span></a></li>
             <li class="zakugrid"><a class="zakugrid__container" href="images/icons/zakucon-aeug.svg" download><img class="zakugrid__icon zakucon" src="images/icons/zakucon-aeug.svg"><span class="zakugrid__title">A.E.U.G.</span></a></li>
@@ -183,7 +197,15 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
+      
+      function searchFilter(x) {
+        $('#search').val(x);
+        filter(x);
+      }
+      
       var close = document.querySelector(".alert__close");
       var alert = document.querySelector(".alert");
       close.addEventListener("click",  closeAlert);
