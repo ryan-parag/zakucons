@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,900|Teko:300");
+/* line 9, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 13, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/* line 19, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+/* line 25, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+body {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  background: #ffffff;
+  color: #191919;
+  margin: 0;
+  padding: 0; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h5 {
+  font-size: 1.4em; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h4 {
+  font-size: 1.96em; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h3 {
+  font-size: 2.744em; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h2 {
+  font-size: 3.8416em; }
+
+/* line 40, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h1 {
+  font-size: 5.37824em; }
+
+/* line 46, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: 'Teko', monospace;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: .03em; }
+
+/* line 62, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+a {
+  color: #c62942;
+  text-decoration: none; }
+  /* line 65, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  a:hover {
+    color: #9c2034; }
+
+/* line 70, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+p {
+  line-height: 1.6; }
+
+/* line 74, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* line 81, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.row {
+  padding: 0 10px; }
+
+/* line 85, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+#zakuconsList {
+  margin: 0 0 45px;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+/* line 96, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.zakugrid {
+  width: 100%;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  position: relative;
+  top: 0;
+  animation: fade 500ms ease forwards; }
+  @media screen and (min-width: 1140px) {
+    /* line 96, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid {
+      max-width: 260px; } }
+  @media screen and (max-width: 1140px) {
+    /* line 96, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid {
+      max-width: 31%; } }
+  @media screen and (max-width: 860px) {
+    /* line 96, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid {
+      max-width: 45%; } }
+  @media screen and (max-width: 550px) {
+    /* line 96, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid {
+      max-width: 100%; } }
+  /* line 115, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .zakugrid__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    opacity: .5; }
+  /* line 121, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .zakugrid__container {
+    width: 100%;
+    border: 1px solid rgba(25, 25, 25, 0.2);
+    background: none;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: #191919;
+    text-align: center;
+    position: relative; }
+    /* line 134, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid__container:hover, .zakugrid__container:focus {
+      border-color: #c62942;
+      color: #c62942;
+      background: rgba(198, 41, 66, 0.05);
+      box-shadow: 0px 5px 12px rgba(33, 37, 72, 0.12);
+      transform: scale(1.03);
+      transition: 100ms ease; }
+      /* line 141, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .zakugrid__container:hover .zakugrid__icon, .zakugrid__container:focus .zakugrid__icon {
+        opacity: 1; }
+      /* line 144, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .zakugrid__container:hover:after, .zakugrid__container:focus:after {
+        opacity: .5; }
+    /* line 149, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .zakugrid__container:after {
+      content: 'svg';
+      text-transform: uppercase;
+      font-size: .75em;
+      letter-spacing: .1em;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      opacity: 0; }
+      @media screen and (max-width: 770px) {
+        /* line 149, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+        .zakugrid__container:after {
+          opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    top: 10px; }
+  to {
+    opacity: 1;
+    top: 0; } }
+
+/* line 178, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin: 0 0 2rem;
+  color: #ffffff;
+  text-shadow: 0px 10px 20px rgba(25, 25, 25, 0.5); }
+  @media screen and (max-width: 700px) {
+    /* line 178, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .hero {
+      background-attachment: scroll;
+      background-position: right 10%; } }
+  /* line 191, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .hero__overlay {
+    background: linear-gradient(to right, #c62942, rgba(198, 41, 66, 0.7), rgba(198, 41, 66, 0));
+    width: 100%;
+    height: 100%; }
+    @media screen and (max-width: 700px) {
+      /* line 191, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .hero__overlay {
+        background: linear-gradient(to top, #c62942, rgba(198, 41, 66, 0.7), rgba(198, 41, 66, 0)); } }
+  /* line 199, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .hero__content {
+    padding: 10rem 0;
+    text-align: center; }
+    @media screen and (max-width: 700px) {
+      /* line 199, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .hero__content {
+        padding: 5rem 0; } }
+  /* line 206, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .hero__download {
+    margin-top: 2rem; }
+  /* line 209, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .hero__subtitle {
+    color: #191919; }
+
+/* line 214, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.btn {
+  text-decoration: none;
+  text-align: center;
+  padding: .5em 2em;
+  background: #c62942;
+  border: 1px solid #c62942;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px; }
+  /* line 224, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .btn:hover, .btn:focus {
+    background: #9c2034;
+    color: rgba(255, 255, 255, 0.9); }
+  /* line 229, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .btn--lg {
+    font-size: 1.3em; }
+  /* line 232, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .btn--outline {
+    background: none;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); }
+    /* line 236, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .btn--outline:hover, .btn--outline:focus {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      text-shadow: 0px 2px 2px rgba(25, 25, 25, 0.3);
+      box-shadow: 0px 5px 12px rgba(25, 25, 25, 0.3);
+      transition: 100ms ease; }
+  /* line 245, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .btn--black {
+    border: 1px solid #191919;
+    background: rgba(25, 25, 25, 0.5); }
+    /* line 248, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .btn--black:hover, .btn--black:focus {
+      background: rgba(25, 25, 25, 0.7);
+      text-shadow: 0px 2px 2px rgba(25, 25, 25, 0.3);
+      box-shadow: 0px 5px 12px rgba(25, 25, 25, 0.3);
+      transition: 100ms ease; }
+
+/* line 258, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.badge {
+  font-size: .7rem;
+  font-weight: 700;
+  background: rgba(25, 25, 25, 0.1);
+  color: rgba(25, 25, 25, 0.4);
+  border-radius: 5px;
+  padding: .3em .8em; }
+
+/* line 267, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.nav {
+  padding: 1rem 0; }
+  /* line 269, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media screen and (max-width: 700px) {
+      /* line 269, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .nav__content {
+        display: block; } }
+  /* line 277, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav__left, .nav__right {
+    width: 35%; }
+    @media screen and (max-width: 700px) {
+      /* line 277, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .nav__left, .nav__right {
+        width: 100%; } }
+  @media screen and (max-width: 700px) {
+    /* line 284, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .nav__left {
+      display: none; } }
+  /* line 289, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav .logo__icon {
+    width: 30px;
+    height: 30px;
+    opacity: .4;
+    fill: currentColor;
+    color: #212548; }
+    /* line 295, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .nav .logo__icon:hover, .nav .logo__icon:focus {
+      opacity: 1;
+      transition: all 150ms ease; }
+  /* line 301, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav__logo {
+    display: block;
+    margin: auto; }
+    /* line 304, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .nav__logo svg {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 150px;
+      color: #191919; }
+      /* line 310, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .nav__logo svg:hover, .nav__logo svg:focus {
+        color: #c62942;
+        transform: scale(1.05);
+        transition: 150ms ease; }
+  /* line 318, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav__links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right; }
+    @media screen and (max-width: 700px) {
+      /* line 318, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .nav__links {
+        text-align: center;
+        margin-top: 1rem; } }
+  /* line 328, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .nav__item {
+    display: inline;
+    font-size: 1.1em; }
+    /* line 331, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .nav__item:not(:last-of-type) {
+      margin-right: 1em; }
+    /* line 334, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .nav__item a {
+      text-decoration: none;
+      color: inherit; }
+      /* line 337, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+      .nav__item a:hover, .nav__item a:focus {
+        color: #c62942; }
+
+/* line 345, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.info {
+  background: rgba(25, 25, 25, 0.1);
+  padding: 3rem 0; }
+  /* line 348, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .info__content {
+    width: 100%;
+    max-width: 700px;
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: auto;
+    text-align: center; }
+  /* line 356, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .info__hero {
+    animation: progressFade 6s ease-in-out infinite; }
+
+/* line 361, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.alert {
+  width: 100%;
+  background: rgba(25, 25, 25, 0.1);
+  color: rgba(25, 25, 25, 0.6);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  animation: alertfade 300ms ease 3s forwards; }
+  /* line 374, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .alert__close {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    opacity: .5;
+    cursor: pointer; }
+    /* line 383, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+    .alert__close:hover {
+      opacity: 1; }
+  /* line 387, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .alert.is-closed {
+    animation: alertfadeout 300ms ease 100ms forwards; }
+
+@keyframes alertfade {
+  from {
+    top: -50px; }
+  to {
+    top: 0;
+    margin-bottom: 0; } }
+
+@keyframes progressFade {
+  0% {
+    opacity: 1;
+    transform: translatey(0px); }
+  50% {
+    opacity: .7;
+    transform: translatey(-20px); }
+  100% {
+    opacity: 1;
+    transform: translatey(0px); } }
+
+@keyframes alertfadeout {
+  from {
+    top: 0px; }
+  to {
+    top: -50px;
+    margin-bottom: -50px; } }
+
+/* line 427, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.search {
+  height: 50px;
+  box-shadow: none;
+  outline: none;
+  order: 1;
+  color: #191919;
+  font-size: 21px;
+  width: 100%;
+  padding: 0 1rem 0 50px;
+  font-family: inherit;
+  border-radius: 2px;
+  border: 1px solid rgba(25, 25, 25, 0.1);
+  display: block;
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(25, 25, 25, 0.1); }
+  /* line 428, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .search__container {
+    max-width: 700px;
+    margin: 45px auto;
+    position: relative; }
+  /* line 433, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .search__icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    opacity: .5; }
+  /* line 442, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .search__empty {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    display: none; }
+  /* line 464, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .search:focus {
+    border-color: #c62942;
+    transition: all 150ms ease; }
+  /* line 468, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .search:hover {
+    box-shadow: 0 4px 8px rgba(25, 25, 25, 0.15);
+    transition: all 150ms ease; }
+
+/* line 474, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.footer {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(25, 25, 25, 0.2);
+  text-align: center;
+  margin-top: 1rem; }
+
+/* line 481, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.quick-search {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+/* line 486, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.intro {
+  max-width: 700px;
+  margin: 3rem auto; }
+
+/* line 491, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+.tag {
+  font-size: 80%;
+  padding: .3em .6em;
+  background: rgba(198, 41, 66, 0.15);
+  color: #c62942;
+  cursor: pointer;
+  line-height: 1;
+  margin: 5px; }
+  /* line 499, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .tag--default {
+    background: rgba(25, 25, 25, 0.15);
+    color: #191919; }
+  /* line 503, /Users/ryan/Downloads/zakucons/src/scss/main.scss */
+  .tag:hover {
+    opacity: .7; }
+
+/*# sourceMappingURL=main.css.map */
